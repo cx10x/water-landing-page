@@ -1,0 +1,364 @@
+/*
+  Global reset:
+  Removes default browser spacing and makes layout easier to control.
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*
+  charity: water brand colors:
+
+  Yellow:     #FFC907
+  Blue:       #2E9DF7
+  Light Blue: #8BD1CB
+  Green:      #4FCB53
+  Orange:     #FF902A
+  Red:        #F5402C
+  Dark Green: #159A48
+  Pink:       #F16061
+*/
+
+/*
+  Font choice:
+  Proxima Nova and Avenir are the project fonts.
+  If the browser does not have them, it will use Arial.
+*/
+body {
+  font-family: "Avenir", "Proxima Nova", Arial, Helvetica, sans-serif;
+  background-color: #ffffff;
+  color: #1f1f1f;
+  line-height: 1.6;
+}
+
+/* HEADER */
+.site-header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 22px 7%;
+  background-color: #ffffff;
+  border-bottom: 5px solid #FFC907;
+}
+
+.logo-image {
+  width: 210px;
+  height: auto;
+  display: block;
+}
+
+/* HERO SECTION */
+.hero {
+  min-height: 680px;
+
+  /*
+    This uses your real image file as the full-width background.
+  */
+  background-image: url("img/women_stood_back.png");
+  background-size: cover;
+  background-position: center;
+}
+
+/*
+  Overlay makes the text readable over the photo.
+*/
+.hero-overlay {
+  position: relative;
+  min-height: 680px;
+  background: linear-gradient(
+    rgba(255, 255, 255, 0.92),
+    rgba(255, 255, 255, 0.78)
+  );
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  padding: 50px 7%;
+  overflow: hidden;
+}
+
+.hero-content {
+  max-width: 860px;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-label {
+  display: inline-block;
+  background-color: #8BD1CB;
+  color: #111111;
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-weight: 800;
+  margin-bottom: 22px;
+  letter-spacing: 0.5px;
+}
+
+.hero h1 {
+  font-size: 64px;
+  line-height: 1.08;
+  margin-bottom: 24px;
+  color: #1f1f1f;
+  font-weight: 900;
+}
+
+.hero-subheadline {
+  font-size: 27px;
+  max-width: 770px;
+  margin: 0 auto 36px;
+  color: #333333;
+}
+
+/* Decorative yellow water can image */
+.hero-water-can {
+  position: absolute;
+  right: 5%;
+  bottom: 35px;
+  width: 180px;
+  opacity: 0.95;
+  transform: rotate(-8deg);
+  z-index: 1;
+}
+
+/* BUTTONS */
+.hero-button,
+.donate-button {
+  display: inline-block;
+  background-color: #FFC907;
+  color: #111111;
+  padding: 16px 34px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 900;
+  font-size: 20px;
+  transition: transform 0.25s ease, background-color 0.25s ease;
+}
+
+.hero-button:hover,
+.donate-button:hover {
+  background-color: #FF902A;
+  transform: translateY(-3px);
+}
+
+/* STORY SECTION */
+.story {
+  display: flex;
+  align-items: center;
+  gap: 54px;
+  padding: 84px 7%;
+  background-color: #ffffff;
+}
+
+.story-text {
+  flex: 1;
+}
+
+.section-label {
+  color: #2E9DF7;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+
+.story h2 {
+  font-size: 44px;
+  line-height: 1.15;
+  margin-bottom: 22px;
+  color: #111111;
+}
+
+.story p {
+  font-size: 20px;
+  margin-bottom: 18px;
+  color: #333333;
+}
+
+.story-image {
+  flex: 1;
+}
+
+.story-image img {
+  width: 100%;
+  display: block;
+  border-radius: 14px;
+  border: 6px solid #FFC907;
+}
+
+/* FEATURES SECTION */
+.features-section {
+  padding: 84px 7%;
+  background-color: #f7fbff;
+  text-align: center;
+}
+
+.features-section h2 {
+  font-size: 42px;
+  margin-bottom: 42px;
+  color: #111111;
+}
+
+.features {
+  display: flex;
+  gap: 24px;
+}
+
+.feature-card {
+  flex: 1;
+  background-color: #ffffff;
+  padding: 34px 26px;
+  border-radius: 14px;
+  border-top: 8px solid #FFC907;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  transition: transform 0.25s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-6px);
+}
+
+.feature-icon {
+  font-size: 42px;
+  margin-bottom: 14px;
+}
+
+.feature-card h3 {
+  font-size: 25px;
+  margin-bottom: 12px;
+  color: #111111;
+}
+
+.feature-card p {
+  font-size: 18px;
+  color: #333333;
+}
+
+/* DONATION / CTA SECTION */
+.donation {
+  padding: 94px 7%;
+  text-align: center;
+  background-color: #2E9DF7;
+  color: #ffffff;
+}
+
+.donation-logo {
+  width: 220px;
+  height: auto;
+  margin-bottom: 26px;
+  background-color: #ffffff;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.donation h2 {
+  font-size: 46px;
+  line-height: 1.15;
+  margin-bottom: 18px;
+}
+
+.donation p {
+  font-size: 22px;
+  max-width: 760px;
+  margin: 0 auto 36px;
+}
+
+/*
+  MEDIA QUERIES
+
+  Media queries let the page change layout based on screen size.
+  This is important because a desktop layout may look too wide or crowded
+  on a mobile phone.
+*/
+
+/* Tablet screens */
+@media (max-width: 900px) {
+  .hero h1 {
+    font-size: 48px;
+  }
+
+  .hero-subheadline {
+    font-size: 23px;
+  }
+
+  .story {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .features {
+    flex-direction: column;
+  }
+
+  .hero-water-can {
+    width: 130px;
+    right: 30px;
+    bottom: 25px;
+  }
+}
+
+/* Phone screens */
+@media (max-width: 600px) {
+  .site-header {
+    justify-content: center;
+    padding: 20px;
+  }
+
+  .logo-image {
+    width: 180px;
+  }
+
+  .hero,
+  .hero-overlay {
+    min-height: 560px;
+  }
+
+  .hero-overlay {
+    padding: 40px 24px;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .hero-subheadline {
+    font-size: 19px;
+  }
+
+  .hero-water-can {
+    width: 95px;
+    right: 18px;
+    bottom: 18px;
+    opacity: 0.75;
+  }
+
+  .story,
+  .features-section,
+  .donation {
+    padding: 56px 24px;
+  }
+
+  .story h2,
+  .features-section h2,
+  .donation h2 {
+    font-size: 32px;
+  }
+
+  .story p,
+  .donation p {
+    font-size: 18px;
+  }
+
+  .hero-button,
+  .donate-button {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .donation-logo {
+    width: 180px;
+  }
+}
