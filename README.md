@@ -22,3 +22,5 @@ With help from AI to jumpstart your layout, you'll focus on structuring your con
 ### Fonts:
 - Proxima Nova
 - Avenir
+
+Updated for github pages deployment
